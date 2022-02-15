@@ -1,0 +1,11 @@
+<h1>Welcome to The Store </h1>
+
+<ul>
+  <% @products.each do |product| %>
+    <li>
+      <a href="<%= article_path(article) %>">
+        <%= article.title %>
+      </a>
+    </li>
+  <% end %>
+</ul>
