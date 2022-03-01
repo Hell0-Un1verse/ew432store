@@ -1,11 +1,20 @@
-<h1>Welcome to The Store </h1>
+<h1>Welcome to Nijūnana</h1>
 
-<ul>
-  <% @products.each do |product| %>
-    <li>
-      <a href="<%= article_path(article) %>">
-        <%= article.title %>
-      </a>
-    </li>
-  <% end %>
-</ul>
+<% @products.each do |product| %>
+<div class="card mb-3" style="max-width: 540px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="..." class="img-fluid rounded-start" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+      
+        <h5 class="card-title"><%=product.name%></h5>
+        <p class="card-text"><%=product.description%></p>
+        <p class="card-text">Price:<%=product.price%></p>
+        <a href="/cart" class="btn btn-primary">Buy</a>
+      </div>
+    </div>
+  </div>
+</div>
+<% end %>
