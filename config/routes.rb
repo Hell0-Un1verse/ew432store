@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
   root "home#index"
-  
-  resources :products, :cart, :home
-end
+  get "/products/:id/buy", to: "products#index", as: "buy"
+  get "/shoppingcart", to: "shoppingcart#index", as: "checkout"
+  resources :products, :shoppingcart, :home
+end 
+
+

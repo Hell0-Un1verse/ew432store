@@ -1,0 +1,3 @@
+class ShoppingcartController < ApplicationController
+    
+end 
