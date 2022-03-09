@@ -1,0 +1,8 @@
+
+<h1>Your cart has <%= @cart.length%> items </h1>
+<% @cart.each do |product| %>
+    <li><%=product["name"]%></li>
+<% end %>
+<div class="d-grid gap-2">
+<%= link_to "Checkout", checkout_path, class:"btn btn-primary" %>
+</div>

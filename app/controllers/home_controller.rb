@@ -1,11 +1,17 @@
 class HomeController < ApplicationController
-  def index
+    def index
+          
+    end
+
+    def products
         if session[:cart].nil?
             session[:cart] = []
         end
         @products = Product.all
         @cart = session[:cart]
-    end
+    
+    end 
+
 
     def buy
         if session[:cart].nil?
@@ -13,12 +19,13 @@ class HomeController < ApplicationController
         end
         product = Product.find(params[:id])
         session[:cart].append(product)
-        redirect_to :root
+        redirect_to :products
     end
 
-    def cart
+    def checkout
         @cart = session[:cart]
-        # empty the shopping cart
         session[:cart] = []
     end
+
+       
 end 
