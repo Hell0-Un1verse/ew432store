@@ -5,8 +5,8 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
-Product.create!([{
-    name:"Box of 50 Paperclips", 
+Product.create!([
+    {name:"Box of 50 Paperclips", 
     description:"Tried. Proven. True. Paper clips so reliable, it'll be the only pack you'll need to buy.", 
     price: "2.99", 
     stock:"9", 
@@ -28,7 +28,9 @@ Product.create!([{
         description:"The cure to forgetfulness and a colorful splash of creativity combined into note form", 
         price: "5.99", 
         stock:"27", 
-        image:"stickies.jpg"}])
+        image:"stickies.jpg"}
+        
+    ])
 
 
 
