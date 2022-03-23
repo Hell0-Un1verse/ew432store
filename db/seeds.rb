@@ -22,7 +22,7 @@ Product.create!([
     description:"The most useful of pens. Feels like your driving your dream car over a sheet of paper", 
     price: "2.99", 
     stock:"9", 
-    image:"paperclips.jpg"}
+    image:"paperclips.jpg"},
 
     {name:"Pack Sticky Notes", 
         description:"The cure to forgetfulness and a colorful splash of creativity combined into note form", 
