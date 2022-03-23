@@ -5,8 +5,31 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
-def change
-change_table :products do |t| 
-    t.string :image
-end 
-end
+Product.create!([{
+    name:"Box of 50 Paperclips", 
+    description:"Tried. Proven. True. Paper clips so reliable, it'll be the only pack you'll need to buy.", 
+    price: "2.99", 
+    stock:"9", 
+    image:"paperclips.jpg"},
+
+    {name:"Ink Cartridges", 
+    description:"Ink Cartridges made with materials from the garden of Eden", 
+    price: "26.99", 
+    stock:"3", 
+    image:"ink.jpg"},
+    
+    {name:"Pack of Pens", 
+    description:"The most useful of pens. Feels like your driving your dream car over a sheet of paper", 
+    price: "2.99", 
+    stock:"9", 
+    image:"paperclips.jpg"}
+
+    {name:"Pack Sticky Notes", 
+        description:"The cure to forgetfulness and a colorful splash of creativity combined into note form", 
+        price: "5.99", 
+        stock:"27", 
+        image:"stickies.jpg"}])
+
+
+
+p "Created #{Product.count} products"
